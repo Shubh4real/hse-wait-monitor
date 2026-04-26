@@ -8,7 +8,7 @@ import pandas as pd
 import os
 
 # ── Folder where your CSV files live ──
-DATA_FOLDER = r"C:\Users\lenovo\hse-wait-monitor\data"
+DATA_FOLDER = os.path.join(os.path.dirname(__file__), "data")
 
 # ── File mapping ──
 FILES = {
