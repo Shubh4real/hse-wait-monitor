@@ -97,12 +97,12 @@ with st.sidebar:
     st.markdown("## 🏥 HSE Wait Monitor")
     st.caption("Powered by NTPF Open Data + Groq AI")
     st.divider()
-    groq_key = st.text_input(
-        "🔑 Groq API Key",
-        type="password",
-        placeholder="Paste your Groq API key",
-        help="Get a free key at console.groq.com"
-    )
+    groq_key = st.secrets.get("GROQ_API_KEY", st.text_input(
+    "🔑 Groq API Key",
+    type="password",
+    placeholder="Paste your Groq API key",
+    help="Get a free key at console.groq.com"
+))
     st.divider()
     list_type = st.radio(
         "📋 Waiting List Type",
