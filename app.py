@@ -10,8 +10,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import os
-st.write("Current dir:", os.path.dirname(__file__))
-st.write("Files in root:", os.listdir(os.path.dirname(__file__)))
+
 
 from data_loader import (
     load_data, get_summary, get_worst_hospitals,
