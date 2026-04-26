@@ -9,6 +9,9 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import os
+st.write("Data folder:", os.path.join(os.path.dirname(__file__), "data"))
+st.write("Files found:", os.listdir(os.path.join(os.path.dirname(__file__), "data")))
 
 from data_loader import (
     load_data, get_summary, get_worst_hospitals,
